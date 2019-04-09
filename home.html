@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	var imageID = 0;
+    	function a(change)
+    	{
+    		if(!imageID)
+    		{
+    			$('body').css("backgroundImage","url('https://images.unsplash.com/photo-1491616599759-2f0134c97da8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')");
+    			imageID++;
+    		}
+    		else if(imageID==1)
+    		{
+    			$('body').css("backgroundImage","url(https://images.unsplash.com/photo-1551462285-52c47236ed8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=890&q=80)");
+    			imageID++;
+    		}
+    		else if(imageID==2)
+    		{
+    			$('body').css("backgroundImage","url(https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)");
+    			imageID=0;	
+    		}
+    		setTimeout("a("+change+")",((change)*1000));
+    	}
+    </script>
+</head>
+<body style="background-image: url(https://images.unsplash.com/photo-1551462285-52c47236ed8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=890&q=80);background-repeat: no-repeat;background-size: cover;" onload="a(4)">
+    <div class="container">
+       <div class="jumbotron" style="margin-top: 15%;margin-left: 10%;margin-right: 10%;background-color: rgba(108, 144, 204,0.6);text-align: center;color: white;border-radius: 20px;">
+           <h1>SHOPPER'S ZONE</h1>
+           <a href="signup.php" class="btn btn-lg btn-warning">SIGNUP</a>
+           <a href="existing.php" class="btn btn-lg btn-warning">LOGIN</a>
+       </div>
+    </div>
+</body>
+</html>
